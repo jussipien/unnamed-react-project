@@ -1,0 +1,144 @@
+// Photo by Kalen Emsley on Unsplash
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 40px;
+}
+
+.header {
+  background-color: orange;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+
+  & a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: red;
+    padding-left: 25px;
+    padding-right: 25px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      font-size: 30px;
+      background-color: black;
+    }
+
+  }
+
+}
+
+
+.footer {
+  background-color: pink;
+}
+
+.screen {
+  height: 100%;
+  background-image: url('/src/img/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-block {
+  background: radial-gradient(gray, lightblue, transparent);
+}
+
+.main-title {
+  color: rgb(67, 50, 128);
+  text-align: center;
+  text-decoration: underline;
+}
+
+.weird-spinner {
+  position: absolute;
+  display: table;
+  left: 50%;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 50%;
+  box-sizing: border-box; 
+  margin:auto;
+  animation: spin 4s linear infinite;
+  
+    &::before{
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: -25%;
+      top: -25%;
+      height: 100px;
+      width: 100px;
+      background: none;
+      border: 8px dotted hotpink;
+      box-sizing: border-box; 
+      animation: bounce 2s linear infinite;
+    }
+}
+
+@keyframes spin {
+  0% {
+    opacity: 1;
+  }
+
+  12.5% {
+    opacity: 0.3;
+    transform: rotate(45deg);
+  }
+
+  25% {
+    opacity: 1;
+    transform: rotate(90deg);
+  }
+
+  37.5% {
+    opacity: 0.3;
+    transform: rotate(135deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+
+  62.5% {
+    opacity: 0.3;
+    transform: rotate(225deg);
+  }
+
+  75% {
+    opacity: 1;
+    transform: rotate(270deg);
+  }
+  
+  87.5% {
+    opacity: 0.3;
+    transform: rotate(315deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(00px);
+  }
+
+  50% {
+    transform: translateX(100px);
+  }
+}
