@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import {
-  BrowserRouter as Router,
-  Route, Link, Redirect, withRouter
-} from 'react-router-dom'
+
+const Footer = () => {
+  return (
+    <div className={"footer"}>  
+      <a href={"#top"} style={{float: "right"}}>up</a>
+    </div>
+  )
+}
+
+export default Footer

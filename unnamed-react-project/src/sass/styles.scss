@@ -8,14 +8,8 @@ h1 {
   font-size: 40px;
 }
 
-.header {
-  background-color: orange;
-  text-align: center;
-  width: 100%;
-  height: 40px;
-  margin-bottom: 10px;
-  padding-top: 20px;
 
+.header, .footer {
   & a {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
@@ -28,13 +22,26 @@ h1 {
       font-size: 30px;
       background-color: black;
     }
-
   }
+}
 
+.header {
+  display: inline-block;
+  background-color: orange;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 25px;
+  padding-top: 20px;
 }
 
 .footer {
+  display: inline-block;
   background-color: pink;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  padding-bottom: 20px;
 }
 
 .notification {
@@ -69,11 +76,13 @@ h1 {
 }
 
 .filtered-image {
+  float: left;
   grid-column: span 1;
   background-size: auto;
   background-repeat: no-repeat;
   border-left:  solid 4px black;
   border-right: solid 4px black;
+  box-sizing: border-box;
   filter: grayscale(100%) blur(2px);
   transition: all 0.3s ease-in-out;
 
@@ -90,22 +99,38 @@ h1 {
   background-image: url('/src/img/abandoned-ancient-antique-architecture-235986.jpg');
 }
 
-.screen {
-  height: 100%;
+.main-block {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
   background-image: url('/src/img/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'); // Photo by Kalen Emsley on Unsplash
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.main-block {
-  background: radial-gradient(gray, lightblue, transparent);
-}
+// .main-block {
+//   background: radial-gradient(gray, lightblue, transparent);
+// }
 
 .main-title {
-  color: rgb(67, 50, 128);
+  color: rgb(212, 0, 255);
+  text-shadow: -1px -1px 0 darkslateblue, 1px 1px 0 darkslateblue, -1px 1px 0 darkslateblue, 1px 1px 0 darkslateblue;
   text-align: center;
-  text-decoration: underline;
+
+  &::before, &::after {
+    content: '';
+    position: relative;
+    background-color: rgba(71, 61, 139, 0.5);
+    width: 50px;
+    height: 25px;
+    margin: 25px;
+    padding-left: 30px;
+    border: dotted 3px darkslateblue;
+    border-radius: 25px;
+    transition: all 1s ease-in-out;
+  }
+
 }
 
 .weird-spinner {
@@ -119,7 +144,7 @@ h1 {
   border-bottom: 4px solid black;
   border-radius: 50%;
   box-sizing: border-box; 
-  margin:auto;
+  margin: auto;
   animation: spin 4s linear infinite;
   
     &::before{

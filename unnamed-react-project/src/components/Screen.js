@@ -11,12 +11,12 @@ const Screen = ({title, text, message, type}) => {
   const notification = <Notification message={message} type={type} />
 
   return (
-    <>
+    <div className={"screen"}>
       {notification}
       <h1 className={"main-title"}>{title}</h1>
       <p>{text}</p>
       <ImageGrid />
-    </>
+    </div>
   )
 }
 
