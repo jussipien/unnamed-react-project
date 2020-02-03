@@ -75,7 +75,7 @@ h1 {
   height: 100vh;
 }
 
-.filtered-image {
+.image-link {
   float: left;
   grid-column: span 1;
   background-size: auto;
@@ -119,17 +119,33 @@ h1 {
   text-align: center;
 
   &::before, &::after {
-    content: '';
+    content: '\f005';
     position: relative;
+    display: inline-block;
+    text-align: center;
     background-color: rgba(71, 61, 139, 0.5);
     width: 50px;
-    height: 25px;
+    height: 50px;
     margin: 25px;
-    padding-left: 30px;
     border: dotted 3px darkslateblue;
     border-radius: 25px;
+    box-sizing: border-box;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
     transition: all 1s ease-in-out;
   }
+
+  // &::before {
+  //   content: '\f100';
+  // }
+
+  // &::after {
+  //   content: '\f101';
+  // }
 
 }
 
